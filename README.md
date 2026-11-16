@@ -4,6 +4,8 @@
 
 A userscript for YouTube that marks watched videos right in the feed. The thumbnail of a watched video is dimmed and overlaid with a watched label in the YouTube interface language — **«ПРОСМОТРЕНО»** in Russian, **"WATCHED"** in English, **"GESEHEN"** in German and so on — always on a single line, with its size automatically adapting to the thumbnail size, so it looks right on the home page, in search results, in subscriptions and in the sidebar alike.
 
+![YouTube Watched Marker in action: watched videos are dimmed and labeled “WATCHED”](screenshot-en.svg)
+
 This is a fork of **YouTube Flag Watched** from the [mchangrh/uscripts](https://github.com/mchangrh/uscripts) repository (file `yt/yt-watched.user.js`), originally by michael (mchang.name).
 
 - **Fork author:** EX1lIUM
@@ -20,9 +22,26 @@ The label language is picked automatically from the YouTube interface language (
 
 ## Installation
 
-1. Install a userscript manager: Tampermonkey or Violentmonkey.
-2. Open the file `yt-watched-marker.user.js` (in this repository) and confirm the installation — or create a new script in your manager and paste the file contents.
-3. Reload the YouTube page.
+The script runs in a browser through a userscript manager extension. Pick one manager, install the script from the direct link below, and reload YouTube — updates will then arrive automatically from this repository.
+
+### 1. Install a userscript manager
+
+- **Tampermonkey** — [official website](https://www.tampermonkey.net/) · [Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) · [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/tampermonkey/)
+- **Violentmonkey** (open source) — [official website](https://violentmonkey.github.io/) · [Chrome Web Store](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag) · [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/violentmonkey/)
+
+### 2. Install the script
+
+Open the direct link: **[yt-watched-marker.user.js](https://raw.githubusercontent.com/EX1lIUMRK/yt-watched-marker/main/yt-watched-marker.user.js)**. The userscript manager should intercept it and show an installation screen — press **Install** / **Confirm installation**.
+
+If the browser simply downloads the file or shows its text instead, use the manual route: open [`yt-watched-marker.user.js`](https://github.com/EX1lIUMRK/yt-watched-marker/blob/main/yt-watched-marker.user.js) in this repository, copy the whole file, then in your manager choose **Add new script**, replace the template with the copied contents and save.
+
+### 3. Reload YouTube
+
+Open or reload any YouTube page. You need to be signed in and have watch history enabled — otherwise YouTube does not put watch progress into the thumbnails and there is nothing to mark. No further setup is needed.
+
+### If the script does not run in Chrome / Chromium
+
+Chrome requires an extra permission for userscript managers. Open `chrome://extensions`, find your manager, open **Details** and enable **Allow user scripts**, then reload YouTube. In Microsoft Edge the same toggle is on the extension details page under `edge://extensions`.
 
 ## No settings
 

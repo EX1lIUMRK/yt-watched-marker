@@ -4,6 +4,8 @@
 
 Юзерскрипт для YouTube: помечает досмотренные видео прямо в ленте. Миниатюра просмотренного видео затемняется, а поверх неё появляется надпись на языке интерфейса YouTube — **«ПРОСМОТРЕНО»** при русском, **«WATCHED»** при английском, **«GESEHEN»** при немецком и так далее — всегда в одну строку, а её размер автоматически подстраивается под размер миниатюры, поэтому одинаково выглядит на главной, в поиске, в подписках и в боковой панели.
 
+![YouTube Watched Marker в работе: просмотренные видео затемнены и помечены надписью «ПРОСМОТРЕНО»](screenshot-ru.svg)
+
 Это форк скрипта **YouTube Flag Watched** из репозитория [mchangrh/uscripts](https://github.com/mchangrh/uscripts) (файл `yt/yt-watched.user.js`), автор оригинала — michael (mchang.name).
 
 - **Автор форка:** EX1lIUM
@@ -20,9 +22,26 @@
 
 ## Установка
 
-1. Установите менеджер юзерскриптов: Tampermonkey или Violentmonkey.
-2. Откройте файл `yt-watched-marker.user.js` (в этом репозитории) и подтвердите установку — либо создайте новый скрипт в менеджере и вставьте содержимое файла целиком.
-3. Обновите страницу YouTube.
+Скрипт работает в браузере через расширение — менеджер юзерскриптов. Выберите один менеджер, установите скрипт по прямой ссылке ниже и обновите YouTube — дальше обновления будут приходить автоматически из этого репозитория.
+
+### 1. Установите менеджер юзерскриптов
+
+- **Tampermonkey** — [официальный сайт](https://www.tampermonkey.net/) · [Chrome Web Store](https://chromewebstore.google.com/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) · [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/tampermonkey/)
+- **Violentmonkey** (открытый исходный код) — [официальный сайт](https://violentmonkey.github.io/) · [Chrome Web Store](https://chromewebstore.google.com/detail/violentmonkey/jinjaccalgkegednnccohejagnlnfdag) · [Firefox Add-ons](https://addons.mozilla.org/firefox/addon/violentmonkey/)
+
+### 2. Установите скрипт
+
+Откройте прямую ссылку: **[yt-watched-marker.user.js](https://raw.githubusercontent.com/EX1lIUMRK/yt-watched-marker/main/yt-watched-marker.user.js)**. Менеджер юзерскриптов должен перехватить её и показать экран установки — нажмите **«Установить»** / **«Подтвердить установку»**.
+
+Если браузер вместо этого просто скачал файл или показал его текст, есть ручной путь: откройте [`yt-watched-marker.user.js`](https://github.com/EX1lIUMRK/yt-watched-marker/blob/main/yt-watched-marker.user.js) в этом репозитории, скопируйте файл целиком, затем в менеджере выберите **«Добавить новый скрипт»**, замените шаблон скопированным содержимым и сохраните.
+
+### 3. Обновите YouTube
+
+Откройте или обновите любую страницу YouTube. Нужны вход в аккаунт и включённая история просмотров — иначе YouTube не добавляет прогресс просмотра в миниатюры и помечать нечего. Больше ничего настраивать не нужно.
+
+### Если скрипт не запускается в Chrome / Chromium
+
+Chrome требует для менеджеров юзерскриптов отдельное разрешение. Откройте `chrome://extensions`, найдите свой менеджер, зайдите в **«Сведения»** и включите **«Разрешить пользовательские скрипты»** (Allow user scripts), затем обновите YouTube. В Microsoft Edge тот же переключатель находится на странице сведений о расширении в `edge://extensions`.
 
 ## Настроек нет
 
